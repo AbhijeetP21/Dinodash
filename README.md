@@ -46,7 +46,7 @@ Once raylib is correctly installed, compile the game with the following command.
 I have added flags for OpenGL and System frameworks based on my local machine, it may or may not require on different machines.
 
 ```bash
-clang++ -std=c++17 Dino_game.cpp -o Dinodash \
+clang++ -std=c++17 Dinodash.cpp -o Dinodash \
     -I/usr/local/include -L/usr/local/lib -lraylib \
     -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
 ```
@@ -58,14 +58,14 @@ clang++ -std=c++17 Dino_game.cpp -o Dinodash \
 After compiling the game, run the following command to start playing:
 
 ```bash
-./Dino_game
+./Dinodash
 ```
 
 ---
 
 ### **Notes:**
 
-- Ensure your system has the necessary frameworks for compiling, especially OpenGL and Cocoa, depending on your platform (macOS or Linux).
+- Ensure your system has the necessary frameworks for compiling, especially OpenGL and Cocoa, depending on your platform (macOS, Linux, Windows).
 - If you're on a different platform, you may need to adjust the compile flags accordingly.
 - If you run into any issues with raylib or the compilation, feel free to check the raylib documentation or GitHub repository for more details on installation and troubleshooting.
 
