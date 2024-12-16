@@ -3,6 +3,27 @@
 
 ---
 
+### **Gameplay**
+
+In **Dinodash**, players control a brave dinosaur on a fast-paced journey filled with obstacles and challenges. The goal is to **dodge** falling **axes** (called Laevas) while collecting **power-ups** like shields, fruits, and other boosts to enhance the dino's abilities. As the game progresses, the difficulty increases with faster-moving obstacles and more frequent challenges.
+
+- **Controls**:  
+   - **Spacebar** to **Jump** over obstacles.
+   - **S** to **Duck** under obstacles.
+   - **Q** to **Turn off the music**.
+   - **E** to **Turn on the music**.
+
+- **Features**:  
+   - Collect **Watermelons** and **Avoid axes (Laevas)**!
+   - Collect power-ups to **gain shields** and protect yourself from obstacles for limited time.
+   - Track your **score** as you dodge obstacles and survive longer.
+   - **Achievements** are unlocked as you reach new milestones like "First 100 Points" or "Survive for 5 Minutes."
+   - Dynamic **background** that change with different game stages.
+
+Stay alive as long as possible, and compete to get the **highest score** on the leaderboard!
+
+---
+
 ### **Pre-requisites**
 
 1. **C++ (preferably C++17 or later)**  
@@ -42,8 +63,8 @@
 
 ### **Compile the Game**
 
-Once raylib is correctly installed, compile the game with the following command. This command assumes raylib is installed on `/usr/local`, but you may need to adjust paths based on your installation:
-I have added flags for OpenGL and System frameworks based on my local machine, it may or may not require on different machines.
+Once raylib is correctly installed, compile the game with the following command. This command assumes raylib is installed on `/usr/local`, but you may need to adjust paths based on your installation.
+I have added flags for OpenGL and System frameworks based on my local machine, it may or may not change on different machines.
 
 ```bash
 clang++ -std=c++17 Dinodash.cpp -o Dinodash \
