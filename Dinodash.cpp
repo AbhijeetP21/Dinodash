@@ -50,17 +50,17 @@ int main()
 
     //Sounds
     InitAudioDevice();
-    Sound Jump = LoadSound("Sounds/jump.wav");
-    Sound duckSound = LoadSound("Sounds/jump.wav");
-    Sound melonPickUp = LoadSound("Sounds/pickupCoin.wav");
-    Sound shieldpickup = LoadSound("Sounds/pickupCoin.wav");
-    Sound kill = LoadSound("Sounds/hitHurt.wav");
-    Music PixelKing = LoadMusicStream("Sounds/Pixel Kings.wav");
+    Sound Jump = LoadSound("assets/Sounds/jump.wav");
+    Sound duckSound = LoadSound("assets/Sounds/jump.wav");
+    Sound melonPickUp = LoadSound("assets/Sounds/pickupCoin.wav");
+    Sound shieldpickup = LoadSound("assets/Sounds/pickupCoin.wav");
+    Sound kill = LoadSound("assets/Sounds/hitHurt.wav");
+    Music PixelKing = LoadMusicStream("assets/Sounds/Pixel Kings.wav");
     PlayMusicStream(PixelKing);
 
 
     // Texture Backround
-    Texture2D mountain =LoadTexture("textures/mountain.png");
+    Texture2D mountain =LoadTexture("assets/textures/mountain.png");
     AnimData mountainData;
     mountainData.rec.width = mountain.width;
     mountainData.rec.height = mountain.height;
@@ -73,7 +73,7 @@ int main()
     mountainData.updateTime =0;
 
     // Cloud data for multiple clouds
-    Texture2D clouds = LoadTexture("textures/cloud.png");
+    Texture2D clouds = LoadTexture("assets/textures/cloud.png");
     const int numClouds = 4;
     AnimData cloudsData[numClouds];
     for (int i = 0; i < numClouds; i++)
@@ -90,7 +90,7 @@ int main()
     }
 
     // Distant mountains animation data
-    Texture2D distantMountain = LoadTexture("textures/distant_mountain.png");
+    Texture2D distantMountain = LoadTexture("assets/textures/distant_mountain.png");
     AnimData distantMountainData;
     distantMountainData.rec.width = distantMountain.width;
     distantMountainData.rec.height = distantMountain.height;
@@ -102,7 +102,7 @@ int main()
     distantMountainData.runntingTime = 0;
     distantMountainData.updateTime = 0;
 
-    Texture2D birds =LoadTexture("textures/birds.png");
+    Texture2D birds =LoadTexture("assets/textures/birds.png");
     AnimData birdsData;
     birdsData.rec.width = birds.width;
     birdsData.rec.height = birds.height;
@@ -114,7 +114,7 @@ int main()
     birdsData.runntingTime = 0;
     birdsData.updateTime =0;
 
-    Texture2D treesBack =LoadTexture("textures/treesBack.png");
+    Texture2D treesBack =LoadTexture("assets/textures/treesBack.png");
     AnimData treesBackData;
     treesBackData.rec.width = treesBack.width;
     treesBackData.rec.height = treesBack.height;
@@ -126,7 +126,7 @@ int main()
     treesBackData.runntingTime = 0;
     treesBackData.updateTime =0;
 
-Texture2D treesFront =LoadTexture("textures/treesFront.png");
+Texture2D treesFront =LoadTexture("assets/textures/treesFront.png");
     AnimData treesFrontData;
     treesFrontData.rec.width = treesFront.width;
     treesFrontData.rec.height = treesFront.height;
@@ -138,14 +138,14 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     treesFrontData.runntingTime = 0;
     treesFrontData.updateTime =0;
 
-    Texture2D dayBackground = LoadTexture("textures/day.png");
-    Texture2D nightBackground = LoadTexture("textures/starrynight.png");
-    Texture2D moonTexture = LoadTexture("textures/moon.png");
-    Texture2D sunTexture = LoadTexture("textures/sun.png");
+    Texture2D dayBackground = LoadTexture("assets/textures/day.png");
+    Texture2D nightBackground = LoadTexture("assets/textures/starrynight.png");
+    Texture2D moonTexture = LoadTexture("assets/textures/moon.png");
+    Texture2D sunTexture = LoadTexture("assets/textures/sun.png");
 
     //Textures Dino
 
-    Texture2D Dino = LoadTexture("textures/dino.png");
+    Texture2D Dino = LoadTexture("assets/textures/dino.png");
     AnimData dinoData;
     dinoData.rec.width = Dino.width/4;
     dinoData.rec.height = Dino.height;
@@ -159,7 +159,7 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
 
 
     //Texture Laeva
-    Texture2D Laeva = LoadTexture("textures/LAEVA.png");
+    Texture2D Laeva = LoadTexture("assets/textures/LAEVA.png");
     const int NumOfLaevas{6};
     int LaevaDist{100};
 
@@ -179,7 +179,7 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     }
 
     //Texture Watermelon
-    Texture2D melon = LoadTexture("textures/Yellow Watermelon2.png");
+    Texture2D melon = LoadTexture("assets/textures/Yellow Watermelon2.png");
     const int NumOfMelon{1};
     int MelonDist{1000};
 
@@ -199,8 +199,8 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     }
 
     // Texture Shield
-    Texture2D shieldTexture = LoadTexture("textures/shield.png");
-    shieldTexture = LoadTexture("textures/shield.png");
+    Texture2D shieldTexture = LoadTexture("assets/textures/shield.png");
+    shieldTexture = LoadTexture("assets/textures/shield.png");
 
     if (shieldTexture.id == 0) {
         printf("Failed to load shield texture.\n");
