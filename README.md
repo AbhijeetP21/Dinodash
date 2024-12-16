@@ -98,9 +98,9 @@ After compiling the game, run the following command to start playing:
 
 ![image](https://github.com/user-attachments/assets/20c43b98-8b4e-4655-b49f-d2868a8d7572)
 
-![image](https://github.com/user-attachments/assets/1cc7cd76-31ea-4274-942e-e0b7dd7f346f)
-
 ![image](https://github.com/user-attachments/assets/390e13a1-177c-4208-800b-e9d5089455d9)
+
+![image](https://github.com/user-attachments/assets/1403088b-9958-4f8d-a0e8-d739bc81cfac)
 
 ![image](https://github.com/user-attachments/assets/1760ab18-7f42-4092-8a15-21f4bce99d38)
 
