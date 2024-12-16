@@ -18,7 +18,7 @@ In **Dinodash**, players control a brave dinosaur on a fast-paced journey filled
    - Collect power-ups to **gain shields** and protect yourself from obstacles for limited time.
    - Track your **score** as you dodge obstacles and survive longer.
    - **Achievements** are unlocked as you reach new milestones like "First 100 Points" or "Survive for 5 Minutes."
-   - Dynamic **background** that change with different game stages.
+   - Dynamic **Day and Night background** that change with different game stages.
 
 Stay alive as long as possible, and compete to get the **highest score** on the leaderboard!
 
