@@ -51,7 +51,9 @@ int main()
     //Sounds
     InitAudioDevice();
     Sound Jump = LoadSound("Sounds/jump.wav");
+    Sound duckSound = LoadSound("Sounds/jump.wav");
     Sound melonPickUp = LoadSound("Sounds/pickupCoin.wav");
+    Sound shieldpickup = LoadSound("Sounds/pickupCoin.wav");
     Sound kill = LoadSound("Sounds/hitHurt.wav");
     Music PixelKing = LoadMusicStream("Sounds/Pixel Kings.wav");
     PlayMusicStream(PixelKing);
@@ -275,7 +277,7 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
             100, 150, 40, BLACK);
             DrawText("It was an axe called Laeva!",
             100, 200, 40, RED);
-            DrawText("Help Glino avoiding avoiding certain DEATH!",
+            DrawText("Help Glino avoiding certain DEATH!",
             100, 250, 40, BLACK);
             DrawTextureRec(Dino, dinoData.rec, dinoData.pos, WHITE);
             DrawText("CONTROLS",
@@ -507,7 +509,8 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
             {
                 // Activate shield
                 ShieldActive = true;
-                ShieldDuration = 5.0f; // Shield lasts 5 seconds
+                ShieldDuration = 3.0f; // Shield lasts 3 seconds
+                PlaySound(shieldpickup);
                 Shields[i].pos.x = windowWidth + GetRandomValue(2500, 10000); // Respawn shield & Random X
                 Shields[i].pos.y = (windowHeight - GetRandomValue(150, 300)) - shieldTexture.height; // Random Y near the ground
 
@@ -553,6 +556,7 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
         if ((IsKeyPressed(KEY_S)))
         {
             DinoIsDuck = true;
+            PlaySound(duckSound);
         }
         if (DinoIsDuck && DuckRunningTime < DuckUpdateTime)
         {
