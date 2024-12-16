@@ -92,4 +92,4 @@ After compiling the game, run the following command to start playing:
 
 ---
 
-
+![It was an axe called Laeva!](https://github.com/user-attachments/assets/de6606af-03c9-4a60-aec9-efa4d0f53d4c)
