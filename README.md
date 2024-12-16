@@ -30,7 +30,7 @@ Stay alive as long as possible, and compete to get the **highest score** on the 
    Code uses modern C++ style, thus game some features need recent verions of C++ to function properly. so ensure you're using C++17 or later for compatibility.
 
 2. **raylib**  
-   **Raylib** is an essential library for rendering the game’s visuals. Follow the instructions below to verify that it is properly installed.
+   **Raylib** is an essential library for rendering the game’s visuals. Follow the instructions below to verify that it is properly installed. 
 
 ---
 
@@ -93,3 +93,17 @@ After compiling the game, run the following command to start playing:
 ---
 
 ![It was an axe called Laeva!](https://github.com/user-attachments/assets/de6606af-03c9-4a60-aec9-efa4d0f53d4c)
+
+![image](https://github.com/user-attachments/assets/6ee1b361-a035-4274-ac64-a8af6478c935)
+
+![image](https://github.com/user-attachments/assets/20c43b98-8b4e-4655-b49f-d2868a8d7572)
+
+![image](https://github.com/user-attachments/assets/1cc7cd76-31ea-4274-942e-e0b7dd7f346f)
+
+![image](https://github.com/user-attachments/assets/390e13a1-177c-4208-800b-e9d5089455d9)
+
+![image](https://github.com/user-attachments/assets/1760ab18-7f42-4092-8a15-21f4bce99d38)
+
+
+
+
