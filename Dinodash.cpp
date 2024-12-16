@@ -147,6 +147,10 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     treesFrontData.runntingTime = 0;
     treesFrontData.updateTime =0;
 
+    Texture2D dayBackground = LoadTexture("textures/day.png");
+    Texture2D nightBackground = LoadTexture("textures/starrynight.png");
+    Texture2D moonTexture = LoadTexture("textures/moon.png");
+
     //Textures Dino
 
     Texture2D Dino = LoadTexture("textures/dino.png");
@@ -263,10 +267,39 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     //Menu
     bool Menu{true};
     bool MusicOn{true};
+    
+    //Timer for day night shifts
+    float dayNightCycleTime = 0.0f; // Timer
+    float cycleDuration = 30.0f;    // Duration for one phase (60 seconds for day, 60 for night)
+    bool isNight = false;          
+
+    // Initial moon position
+    Vector2 moonPosition = {900, 100}; 
 
     SetTargetFPS(60);
     while (!WindowShouldClose())
-    {
+    {   
+        //Logic update for day-night cycle 
+        float dt = GetFrameTime();
+
+        // Update day-night cycle timer
+        dayNightCycleTime += dt;
+        if (dayNightCycleTime >= cycleDuration) 
+        {
+            isNight = !isNight; // Toggle between day and night
+            dayNightCycleTime = 0.0f; // Reset the cycle timer
+        }
+
+        // Moon position update logic (before rendering)
+        if (isNight) 
+        {
+            moonPosition.x -= 6 * dt; // Moon moves left slowly
+            if (moonPosition.x < -100) 
+            {
+                moonPosition.x = windowWidth + 100; // Reset moon position after leaving the screen
+            }
+        }
+
         BeginDrawing();
         ClearBackground(WHITE);
     if(Menu)
@@ -327,7 +360,7 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     else
     {
 
-
+        
 
         if (LaevaCollisions)
         {
@@ -428,6 +461,22 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
         //Delta Time
         float dt{GetFrameTime()};
 
+        // Update timer for day-night cycle
+        dayNightCycleTime += dt;
+        if (dayNightCycleTime >= cycleDuration) 
+        {
+            isNight = !isNight;         // Toggle day/night state
+            dayNightCycleTime = 0.0f;   // Reset timer
+        }
+        
+        if (isNight) 
+        {
+            moonPosition.x -= 20 * dt; // Moon moves leftwards
+            if (moonPosition.x < -100) 
+            {
+                moonPosition.x = windowWidth + 100; // Reset after exiting the screen
+            }
+        }
 
         //Game Logic
 
@@ -682,9 +731,6 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
             }
         }
 
-
-        //previous code
-
         // Move distant mountains
         if (distantMountainData.pos.x <= -distantMountain.width)
         {
@@ -694,6 +740,8 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
         {
             distantMountainData.pos.x -= distantMountainSpeed * dt; // update - Distant mountains move faster than clouds
         }
+
+
 
         if (birdsData.pos.x <= -200)
         {
@@ -721,7 +769,19 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
         {
             treesBackData.pos.x -= treesBackSpeed*dt;
         }
-
+        
+        // Background Rendering
+        if (isNight) 
+        {
+            DrawTexture(nightBackground, 0, 0, WHITE); // Starry night background
+            DrawTextureEx(moonTexture, moonPosition, 0.0f, 0.05f, WHITE); // Moon
+        } 
+        else 
+        {
+            DrawTexture(dayBackground, 0, 0, WHITE); // Daytime background
+        }
+        
+        // Foreground Elements
         DrawLine(0, (windowHeight - 350) + dinoData.rec.height, windowWidth, (windowHeight - 350) + dinoData.rec.height, BLACK);
         DrawTextureRec(mountain, mountainData.rec, mountainData.pos, WHITE);
         for (int i = 0; i < numClouds; i++)
@@ -734,8 +794,8 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
         DrawTextureRec(treesFront, treesFrontData.rec, treesFrontData.pos, WHITE);
 
         DrawLine(0, (windowHeight - 250) + dinoData.rec.height, windowWidth, (windowHeight - 250) + dinoData.rec.height, BLACK);
-
-        DrawTextureRec(shieldTexture, Shields[0].rec, Shields[0].pos, WHITE);
+        
+        //Game Elements
 
         DrawTextureRec(Dino, dinoData.rec, dinoData.pos, WHITE);
 
@@ -776,6 +836,10 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     UnloadTexture(shieldTexture);
     UnloadTexture(clouds);
     UnloadTexture(distantMountain);
+    UnloadTexture(dayBackground);
+    UnloadTexture(nightBackground);
+    UnloadTexture(moonTexture);
+
 
     CloseWindow();
 
