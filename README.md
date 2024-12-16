@@ -86,7 +86,7 @@ After compiling the game, run the following command to start playing:
 
 ### **Notes:**
 
-- Ensure your system has the necessary frameworks for compiling, especially OpenGL and Cocoa, depending on your platform (macOS, Linux, Windows).
+- Ensure your system has the necessary frameworks for compiling, especially OpenGL and Cocoa, depending on your platform (macOS, Linux or Windows).
 - If you're on a different platform, you may need to adjust the compile flags accordingly.
 - If you run into any issues with raylib or the compilation, feel free to check the raylib documentation or GitHub repository for more details on installation and troubleshooting.
 
