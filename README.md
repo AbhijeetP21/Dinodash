@@ -22,6 +22,8 @@ In **Dinodash**, players control a brave dinosaur on a fast-paced journey filled
 
 Stay alive as long as possible, and compete to get the **highest score** on the leaderboard!
 
+Gameplay recording: https://youtu.be/naddU47TrCw 
+
 ---
 
 ### **Pre-requisites**
