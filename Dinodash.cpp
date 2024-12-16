@@ -89,15 +89,6 @@ int main()
         cloudsData[i].updateTime = 0;
     }
 
-
-    // cloudsData.rec.x = 0;
-    // cloudsData.rec.y = 0;
-    //cloudsData.pos.x = 0; // Start at the left
-    // cloudsData.pos.y = 50; // Positioned near the top
-    // cloudsData.frame = 0;
-    // cloudsData.runntingTime = 0;
-    // cloudsData.updateTime = 0;
-
     // Distant mountains animation data
     Texture2D distantMountain = LoadTexture("textures/distant_mountain.png");
     AnimData distantMountainData;
@@ -150,6 +141,7 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     Texture2D dayBackground = LoadTexture("textures/day.png");
     Texture2D nightBackground = LoadTexture("textures/starrynight.png");
     Texture2D moonTexture = LoadTexture("textures/moon.png");
+    Texture2D sunTexture = LoadTexture("textures/sun.png");
 
     //Textures Dino
 
@@ -270,9 +262,11 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     
     //Timer for day night shifts
     float dayNightCycleTime = 0.0f; // Timer
-    float cycleDuration = 30.0f;    // Duration for one phase (60 seconds for day, 60 for night)
+    float cycleDuration = 45.0f;    // Duration for one phase (45 seconds for day, 45 for night)
     bool isNight = false;          
 
+    // sun position
+    Vector2 sunPosition = {900, 20};
     // Initial moon position
     Vector2 moonPosition = {900, 100}; 
 
@@ -779,6 +773,8 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
         else 
         {
             DrawTexture(dayBackground, 0, 0, WHITE); // Daytime background
+            //Render the sum during the day
+            DrawTextureEx(sunTexture, sunPosition, 0.0f, 0.5f, WHITE); // Sun texture
         }
         
         // Foreground Elements
@@ -838,7 +834,9 @@ Texture2D treesFront =LoadTexture("textures/treesFront.png");
     UnloadTexture(distantMountain);
     UnloadTexture(dayBackground);
     UnloadTexture(nightBackground);
+    UnloadTexture(sunTexture);
     UnloadTexture(moonTexture);
+
 
 
     CloseWindow();
