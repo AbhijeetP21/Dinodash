@@ -155,6 +155,6 @@ After compilation:
 ## **Credits**
 - **Developer**: Abhijeet Pachpute  
 - **Library**: Raylib  
-- **Assets**: Custom graphics and free audio resources  
+- **Assets**: Custom graphics, pngwing.com and free audio resources  
 
 ---
