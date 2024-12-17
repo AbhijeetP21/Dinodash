@@ -92,6 +92,8 @@ After compiling the game, run the following command to start playing:
 - If you're on a different platform, you may need to adjust the compile flags accordingly.
 - If you run into any issues with raylib or the compilation, feel free to check the raylib documentation or GitHub repository for more details on installation and troubleshooting.
 
+For detailed documentation, [click here](Documentation.md).
+
 ---
 
 ![It was an axe called Laeva!](https://github.com/user-attachments/assets/de6606af-03c9-4a60-aec9-efa4d0f53d4c)
