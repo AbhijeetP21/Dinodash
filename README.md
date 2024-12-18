@@ -5,7 +5,7 @@
 
 ### **Gameplay**
 
-In **Dinodash**, players control a brave dinosaur on a fast-paced journey filled with obstacles and challenges. The goal is to **dodge** falling **axes** (called Laevas) while collecting **power-ups** like shields, fruits, and other boosts to enhance the dino's abilities. As the game progresses, the difficulty increases with faster-moving obstacles and more frequent challenges.
+In **Dinodash**, players control a brave dinosaur called 'Glino' on a fast-paced journey filled with obstacles and challenges. The goal is to **dodge** falling **axes** (called Laevas) while collecting **power-ups** like shields, fruits, and other boosts to enhance the dino's abilities. As the game progresses, the difficulty increases with faster-moving obstacles and more frequent challenges.
 
 - **Controls**:  
    - **Spacebar** to **Jump** over obstacles.
