@@ -20,7 +20,7 @@ In **Dinodash**, players control a brave dinosaur called 'Glino' on a fast-paced
    - **Achievements** are unlocked as you reach new milestones like "First 100 Points" or "Survive for 5 Minutes."
    - Dynamic **Day and Night background** that change with different game stages.
 
-Stay alive as long as possible, and compete to get the **highest score** on the leaderboard!
+Keep Glino the Dino alive as long as possible, and compete to get the **highest score** on the leaderboard!
 
 Gameplay recording: https://youtu.be/naddU47TrCw 
 
