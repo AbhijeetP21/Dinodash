@@ -1,6 +1,8 @@
 ### **Dinodash**
 **Dinodash** is a fast-paced, action-packed dinosaur survival game where players must dodge obstacles, collect power-ups, and unlock achievements. Built with **C++** and **Raylib**, it features immersive gameplay, stunning visuals, and exciting challenges.
 
+Update: Dinodash has moved from a native C++ Raylib game engine to a three-repository system where the same engine code is cross-compiled to WebAssembly, with separate layers for browser runtime adaptation and public deployment. As a result, the game runs in a browser with the same update loop, physics rules, and state transitions as the desktop version, without duplicating logic or introducing browser-owned simulation behavior.
+
 ---
 
 ### **Gameplay**
